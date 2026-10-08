@@ -72,13 +72,13 @@ const spotLight = new THREE.SpotLight(
     100
 );
 spotLight.castShadow = true;
-spotLight.position.set(-9, 7, -4);
+spotLight.position.set(-9, 8, -4);
 spotLight.target.position.set(-9, 2, -4);
 scene.add(spotLight);
 scene.add(spotLight.target);
 
-const spotLightHelper = new THREE.SpotLightHelper(spotLight);
-scene.add(helper, spotLightHelper);
+// const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+// scene.add(helper, spotLightHelper);
 
 // ---------------------------------------------------
 // Floor
@@ -189,7 +189,7 @@ const blueMaterial =
 
 const goldMaterial =
     new THREE.MeshStandardMaterial({
-        color: 0xEFBF04,
+        color: 0xffcc00,
         metalness: 0.7,
         roughness: 0.2
     });
@@ -213,6 +213,36 @@ const treeMaterial =
 
 const knotMaterial =
     new THREE.MeshNormalMaterial({
+    });
+
+const dodecahedronMaterial =
+    new THREE.MeshPhysicalMaterial({
+        color: 0xffffff,
+        metalness: 0.5,
+        roughness: 0.5,
+    });
+
+const crystalMaterial =
+    new THREE.MeshStandardMaterial({
+        color: 0x99999ff,
+        metalness: 0.3,
+        roughness: 0.1,
+        transparent: true,
+        opacity: 0.7
+    });
+
+const donutMaterial =
+    new THREE.MeshStandardMaterial({
+        color: 0xff69b4,
+        metalness: 0.1,
+        roughness: 0.4
+    });
+
+const pyramidMaterial =
+    new THREE.MeshStandardMaterial({
+        color: 0x4169e1,
+        metalness: 0.3,
+        roughness: 0.4
     });
 // ---------------------------------------------------
 // Row 1
@@ -249,7 +279,7 @@ createPedestal(3, -4);
 const crystal =
     new THREE.Mesh(
         new THREE.OctahedronGeometry(1.5),
-        yellowMaterial
+        crystalMaterial
     );
 
 placeOnPedestal(crystal, 3, -4);
@@ -284,7 +314,7 @@ const torus =
             16,
             100
         ),
-        orangeMaterial
+        donutMaterial
     );
 
 placeOnPedestal(torus, -9, 5);
@@ -301,7 +331,7 @@ const pyramid =
             3,
             4
         ),
-        blueMaterial
+        pyramidMaterial
     );
 
 placeOnPedestal(pyramid, -3, 5);
@@ -354,7 +384,7 @@ createPedestal(0, 0);
 const mystery =
     new THREE.Mesh(
         new THREE.DodecahedronGeometry(1.5),
-        whiteMaterial
+        dodecahedronMaterial
     );
 
 placeOnPedestal(mystery, 0, 0);

@@ -37,3 +37,13 @@ The displayed objects currently use `MeshBasicMaterial`, which is unaffected by 
 Basic material
 ### Why do the objects appear flat and similar?
 They all use the same basic material [very basic]
+
+## Reflection:
+### Which material looked the most realistic?
+Either the metal ball or the "tree" cylindar. Especially the sphere, as it looks reflective & shiny like a real life metal.
+### Which material looked the most cartoon-like?
+The cell-shaded cone of course as the shading isn't as gradiant-y.
+### Which material would you use for a metal robot?
+MeshStandardMaterial with the proper metalness & roughness.
+### How did adding the spotlight affect the scene?
+It made the objects' reflections appear more realistic than before as there's visible changes in the lighting, especially for the shinier ones.
