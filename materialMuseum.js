@@ -175,6 +175,24 @@ const blueMaterial =
         color: 0x4169e1
     });
 
+const goldMaterial =
+    new THREE.MeshStandardMaterial({
+        color: 0xEFBF04,
+        metalness: 0.7,
+        roughness: 0.2
+    });
+
+const plasticMaterial = 
+    new THREE.MeshPhongMaterial({
+        color: 0x00bcd4,
+        shininess: 100
+    });
+
+const cartoonMaterial =
+    new THREE.MeshToonMaterial({
+        color: 0xff4fd8,
+        shininess: 100
+    });
 // ---------------------------------------------------
 // Row 1
 // ---------------------------------------------------
@@ -184,7 +202,7 @@ createPedestal(-9, -4);
 const sphere =
     new THREE.Mesh(
         new THREE.SphereGeometry(1, 32, 32),
-        redMaterial
+        goldMaterial
     );
 
 placeOnPedestal(sphere, -9, -4);
@@ -197,7 +215,7 @@ createPedestal(-3, -4);
 const cube =
     new THREE.Mesh(
         new THREE.BoxGeometry(2,2,2),
-        cyanMaterial
+        plasticMaterial
     );
 
 placeOnPedestal(cube, -3, -4);
@@ -223,7 +241,7 @@ createPedestal(9, -4);
 const statue =
     new THREE.Mesh(
         new THREE.ConeGeometry(1,3,32),
-        magentaMaterial
+        cartoonMaterial
     );
 
 placeOnPedestal(statue, 9, -4);
