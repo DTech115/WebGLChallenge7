@@ -241,7 +241,7 @@ const donutMaterial =
 const pyramidMaterial =
     new THREE.MeshStandardMaterial({
         color: 0x4169e1,
-        metalness: 0.3,
+        metalness: 0.9,
         roughness: 0.4
     });
 // ---------------------------------------------------

@@ -37,10 +37,17 @@ The displayed objects currently use `MeshBasicMaterial`, which is unaffected by 
 Basic material
 ### Why do the objects appear flat and similar?
 They all use the same basic material [very basic]
-
+### Which object looks the most realistic?
+Probably the metal ball. It feels the most realistic in terms of reflection to a real light-source.
+### Which object is the shiniest?
+It's between the pyramid & sphere, though I lean towards sphere. Shinier & more reflective.
+### Which object looks cartoon-like?
+The cell-shaded cone as it has simple one-color shadows 
+### Which object looks best for a natural scene?
+Probably the tree as it has the most natural shading.
 ## Reflection:
 ### Which material looked the most realistic?
-Either the metal ball or the "tree" cylindar. Especially the sphere, as it looks reflective & shiny like a real life metal.
+Either the metal ball or the pyramid. Especially the sphere, as it looks reflective & shiny like a real life metal.
 ### Which material looked the most cartoon-like?
 The cell-shaded cone of course as the shading isn't as gradiant-y.
 ### Which material would you use for a metal robot?
