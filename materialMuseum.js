@@ -66,7 +66,19 @@ const helper = new THREE.PointLightHelper(
     0.5
 );
 
-scene.add(helper);
+// placed above the gold sphere
+const spotLight = new THREE.SpotLight(
+    0xffffff,
+    100
+);
+spotLight.castShadow = true;
+spotLight.position.set(-9, 7, -4);
+spotLight.target.position.set(-9, 2, -4);
+scene.add(spotLight);
+scene.add(spotLight.target);
+
+const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+scene.add(helper, spotLightHelper);
 
 // ---------------------------------------------------
 // Floor
@@ -193,6 +205,15 @@ const cartoonMaterial =
         color: 0xff4fd8,
         shininess: 100
     });
+
+const treeMaterial = 
+    new THREE.MeshLambertMaterial({
+        color: 0x2ecc71,
+    });
+
+const knotMaterial =
+    new THREE.MeshNormalMaterial({
+    });
 // ---------------------------------------------------
 // Row 1
 // ---------------------------------------------------
@@ -297,7 +318,7 @@ const normalObject =
             100,
             16
         ),
-        purpleMaterial
+        knotMaterial
     );
 
 placeOnPedestal(normalObject, 3, 5);
@@ -315,7 +336,7 @@ const tree =
             3,
             6
         ),
-        greenMaterial
+        treeMaterial
     );
 
 placeOnPedestal(tree, 9, 5);
